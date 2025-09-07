@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-preset-1-font-family: 'Fraunces';
+    --text-preset-1-font-weight: bold;
+    --text-preset-1-font-size: 2rem;
+    --text-preset-2-font-family: 'Montserrat';
+    --text-preset-2-font-weight: bold;
+    --text-preset-2-font-size: 0.9rem;
+    --text-preset-3-font-family: 'Montserrat';
+    --text-preset-3-font-weight: medium;
+    --text-preset-3-font-size: 0.9rem;
+    --text-preset-4-font-family: 'Montserrat';
+    --text-preset-4-font-weight: medium;
+    --text-preset-4-font-size: 0.75rem;
+    --text-preset-4-letter-spacing: 5px;
+    --text-preset-4-line-height: 1.4;
+    --text-preset-5-font-family: 'Montserrat';
+    --text-preset-5-font-weight: medium;
+    --text-preset-5-font-size: 0.8rem;
+    --text-preset-5-line-height: 1.2;    
+}
+
+
+
+body {
+    background: #f2eae2;
+    min-height: 100vh;
+    padding: 5em 0.75em;
+    
+}
+
+.preview-card {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: white;
+    border-radius: 8px;
+    margin: 0 auto;
+       
+}
+
+.product-image {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.product-image--large {
+    display: none;
+}
+
+.preview-card-content {
+    padding: 2em;
+}
+
+.product-category {
+   font-family: var(--text-preset-4-font-family); 
+   font-size: var(--text-preset-4-font-size);
+   font-weight: var(--text-preset-4-font-weight);
+   letter-spacing: var(--text-preset-4-letter-spacing);
+   line-height: var(--text-preset-4-line-height);
+   text-transform: uppercase;
+   color: #6C7289;
+}
+
+.product-name {
+    font-family: var(--text-preset-1-font-family); 
+   font-size: var(--text-preset-1-font-size);
+   font-weight: var(--text-preset-1-font-weight);
+   margin: 1.5rem auto;
+
+}
+
+.product-description {
+    font-family: var(--text-preset-3-font-family); 
+   font-size: var(--text-preset-3-font-size);
+   font-weight: var(--text-preset-3-font-weight);
+   color: #6C7289;
+}
+
+.product-price {
+    margin: 2em auto;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.price-promo {
+    font-family: var(--text-preset-1-font-family);
+    font-size: var(--text-preset-1-font-size);
+    font-weight: var(--text-preset-1-font-weight);
+    
+    display: inline-block;
+    color: #3D8168;
+}
+
+.price-dotted {
+    display: inline-block;
+    text-decoration: line-through;
+    font-family: var(--text-preset-5-font-family);
+    font-size: var(--text-preset-5-font-size);
+    font-weight: var(--text-preset-5-font-weight);
+    line-height: var(--text-preset-5-line-height);
+    color: #6C7289;
+}
+
+button {
+    width: 100%;
+    padding: 16px 32px;
+    background: #3D8168;
+    color: white;
+    font-family: var(--text-preset-2-font-family);
+    font-weight: var(--text-preset-2-font-weight);
+    font-size: var(--text-preset-2-font-size);
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+}
+
+button:focus {
+    outline: 2px solid #3D8168;
+    outline-offset: 2px;
+}
+
+@media screen and (min-width: 48em){
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0; 
+    }
+    .preview-card {
+        flex-direction: row;
+        border-radius: 8px;
+        height: 456px;
+        width: 600px;
+        
+    }
+
+    .product-image {
+        display: none;
+    }
+
+    .product-image--large {
+        display: block;
+        width: 50%;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .preview-card-content {
+        width: 50%;
+    }
+
+}
+
